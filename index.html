@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Puzzle Game!</h1>
+        <p>Select a level to start playing:</p>
+        <div class="levels">
+            <a href="/game?level=Beginner" class="level-btn beginner">Beginner</a>
+            <a href="/game?level=Medium" class="level-btn medium">Medium</a>
+            <a href="/game?level=High" class="level-btn high">High</a>
+        </div>
+    </div>
+</body>
+</html>
