@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game - {{ level }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ level }} Level</h1>
+        <div id="game">
+            <p id="scrambled-word"></p>
+            <input type="text" id="user-input" placeholder="Type your answer here">
+            <button id="submit-btn">Submit</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <script>
+        const words = {{ words | tojson }};
+        const level = "{{ level }}";
+    </script>
+</body>
+</html>
